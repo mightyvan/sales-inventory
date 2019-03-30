@@ -1,6 +1,8 @@
 ## Installation
 1. Install NodeJS https://nodejs.org/en/download/
-2. Install Angular
+2. Install Git https://git-scm.com/downloads
+3. I am using Visual Studio as editor, it's good for angular scripts but you can choose any editor you like. 
+3. Install Angular
   $ npm install -g @angular/cli
 
 ### Clone repo
