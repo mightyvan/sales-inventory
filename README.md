@@ -1,3 +1,7 @@
+## Reference
+UI Source - https://coreui.io/react/demo/#/dashboard  - Download here https://github.com/coreui/coreui
+System to clone (username/pw - will be provided)  - https://beautequest2.workingpoint.com/ 
+
 ## Installation
 1. Install NodeJS https://nodejs.org/en/download/
 2. Install Git https://git-scm.com/downloads
