@@ -1,5 +1,7 @@
 ## Reference
+``` bash
 UI Source - https://coreui.io/react/demo/#/dashboard  - Download here https://github.com/coreui/coreui
+
 System to clone (username/pw - will be provided)  - https://beautequest2.workingpoint.com/ 
 
 ## Installation
@@ -7,8 +9,8 @@ System to clone (username/pw - will be provided)  - https://beautequest2.working
 2. Install Git https://git-scm.com/downloads
 3. I am using Visual Studio as editor, it's good for angular scripts but you can choose any editor you like. 
 3. Install Angular
-  $ npm install -g @angular/cli
-
+    $ npm install -g @angular/cli
+```
 ### Clone repo
 
 ``` bash
