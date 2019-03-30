@@ -1,0 +1,231 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <strong>New</strong> Invoice
+        </div>
+        <div class="card-body">
+          <form action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input">Customer *</label>
+                  <div class="input-group col-md-9">
+                    <input type="text" class="form-control" placeholder="Find a person or company">
+                    <div class="input-group-append">
+                      <button class="btn btn-secondary" type="button">
+                        <i class="fa fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input">Bill Type</label>
+                  <div class="col-md-9">
+                    Type in the Customer field above to find a person or company in your customer list.                    
+                    <a href="javascript:;" class="btn btn-outline-secondary"><i class="fa fa-lightbulb-o"></i>&nbsp;Add New</a>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label">&nbsp;</label>
+                  <div class="col-md-9 col-form-label">
+                    <div class="form-check form-check-inline mr-1">
+                      <input class="form-check-input" type="checkbox" id="inline-checkbox1" value="option1">
+                      <label class="form-check-label" for="inline-checkbox1">Include Shipping Information (Address & Charges)</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input">Invoice #</label>
+                  <div class="col-md-9">
+                    <input type="text" id="text-input" name="text-input" class="form-control" placeholder="18167647">
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="date-input">Date</label>
+                  <div class="col-md-9">
+                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                    <span class="help-block">Please enter a valid date</span>
+                  </div>                  
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="date-input">Due Date</label>
+                  <div class="col-md-9">
+                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                    <span class="help-block">Please enter a valid date</span>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-md-3 col-form-label" for="text-input">Customer PO #</label>
+                  <div class="col-md-9">
+                    <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-md-4">
+                <div class="input-group form-group">
+                  <input type="text" class="form-control" placeholder="Find or Add New Item">
+                  <div class="input-group-append">
+                    <button class="btn btn-primary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                    <button class="btn btn-primary" type="button">
+                      <i class="fa fa-plus-square"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Item Description">
+                </div>
+                <div class="form-group row">
+                  <div class="col-md-6">
+                    <div class="form-group row">
+                      <div class="col-md-12">
+                        <div class="input-group">
+                          <input type="email" id="input2-group3" name="input2-group3" class="form-control" placeholder="Price" autocomplete="email">
+                          <div class="input-group-append" dropdown>
+                            <button type="button" class="btn btn-primary dropdown-toggle" dropdownToggle>
+                              Reseller
+                              <span class="caret"></span>
+                            </button>
+                            <div class="dropdown-menu" *dropdownMenu>
+                              <a class="dropdown-item" href="#">Reseller</a>
+                              <a class="dropdown-item" href="#">Distributor</a>
+                              <a class="dropdown-item" href="#">Mega Distributor</a>                              
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Qty">  
+                  </div>
+                </div>
+                <a href="javascript:;" class="btn btn-outline-primary">Add Item</a>
+                </div>
+                <div class="col-md-8">
+                  <table class="table table-sm">
+                    <thead>
+                      <tr>
+                        <th>&nbsp;</th>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th>Total</th>
+                        <th>Tax %</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><i class="icon-trash icons font-1xl"></i></td>
+                        <td>Travel Set</td>
+                        <td>850</td>
+                        <td>10</td>
+                        <td>0.00</td>
+                        <td>0.00</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td></td>
+                        <td>Subtotal:</td>
+                        <td>
+                          0.00
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td></td>
+                        <td>Pre-tax Total:</td>
+                        <td>
+                          0.00
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td></td>
+                        <td>Tax:</td>
+                        <td>
+                          0.00
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                        <td></td>
+                        <td>Total:</td>
+                        <td>
+                          0.00
+                        </td>
+                        <td>
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="textarea-input">Notes to Customer (visible to customer on invoice):</label>
+              <div class="col-md-9">
+                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="textarea-input">
+                Terms & Conditions (visible to customer on invoice):
+                <small class="help-block form-text text-muted">Enter additional information about the terms of this invoice.</small>                
+              </label>
+              <div class="col-md-9">
+                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>                
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label" for="textarea-input">Internal Notes (not visible to customer):</label>
+              <div class="col-md-9">
+                <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>                
+              </div>
+            </div>            
+          </form>
+        </div>
+        <div class="card-footer">
+          <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save Invoice</button>
+          <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Cancel</button>
+        </div>
+      </div>      
+    </div><!--/.col-->
+  </div><!--/.row-->
+</div>
