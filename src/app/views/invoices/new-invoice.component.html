@@ -11,13 +11,18 @@
               <div class="col-md-7">
                 <div class="form-group row">
                   <label class="col-md-3 col-form-label" for="text-input">Customer *</label>
-                  <div class="input-group col-md-9">
-                    <input type="text" class="form-control" placeholder="Find a person or company">
-                    <div class="input-group-append">
-                      <button class="btn btn-secondary" type="button">
-                        <i class="fa fa-search"></i>
-                      </button>
-                    </div>
+                  <div class="input-group col-md-8">
+                
+                    <mat-form-field class="form-full-width" appearance="outline">
+                      <mat-label>Find a person or company</mat-label>
+                      <input type="text"  matInput [formControl]="UserControl" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let option of options" [value]="option.user_name">
+                              {{option.user_name}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                 
                   </div>
                 </div>
                 <div class="form-group row">
@@ -47,14 +52,17 @@
                 <div class="form-group row">
                   <label class="col-md-3 col-form-label" for="date-input">Date</label>
                   <div class="col-md-9">
-                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
-                    <span class="help-block">Please enter a valid date</span>
+                      <mat-form-field>
+                          <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                          <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
                   </div>                  
                 </div>
                 <div class="form-group row">
                   <label class="col-md-3 col-form-label" for="date-input">Due Date</label>
                   <div class="col-md-9">
-                    <input class="form-control" id="date-input" type="date" name="date-input" placeholder="date">
+                     
                     <span class="help-block">Please enter a valid date</span>
                   </div>
                 </div>
@@ -107,7 +115,8 @@
                     <input type="text" id="text-input" name="text-input" class="form-control" placeholder="Qty">  
                   </div>
                 </div>
-                <a href="javascript:;" class="btn btn-outline-primary">Add Item</a>
+                <a href="javascript:;" class="btn btn-outline-primary" mat-raised-button>Add Item</a>
+                
                 </div>
                 <div class="col-md-8">
                   <table class="table table-sm">
@@ -123,7 +132,7 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td><i class="icon-trash icons font-1xl"></i></td>
+                        <td><button mat-icon-button  ><mat-icon class="cui-trash font-2xl"></mat-icon></button></td>
                         <td>Travel Set</td>
                         <td>850</td>
                         <td>10</td>
@@ -226,6 +235,6 @@
           <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Cancel</button>
         </div>
       </div>      
-    </div><!--/.col-->
-  </div><!--/.row-->
+    </div>
+  </div>
 </div>

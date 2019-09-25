@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -41,9 +43,11 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import { MaterialModule } from './material/material-module';
+
+
+
 
 @NgModule({
   imports: [
@@ -59,9 +63,10 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     TabsModule.forRoot(),
     ChartsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
-    ReactiveFormsModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MaterialModule
   ],
   declarations: [
     AppComponent,
@@ -69,7 +74,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   providers: [{
     provide: LocationStrategy,

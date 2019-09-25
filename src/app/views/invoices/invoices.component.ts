@@ -8,7 +8,7 @@ export class InvoicesComponent {
   constructor() { }
     
   expanded(event: any): void {
-    // console.log(event);
+    console.log(event);
   }
   
 } 

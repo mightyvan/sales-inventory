@@ -65,7 +65,7 @@ export const routes: Routes = [
       {
         path: 'items',
         loadChildren: () => import('./views/items/items.module').then(m => m.ItemsModule)
-      }, 
+      },
       {
         path: 'base',
         loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
@@ -89,7 +89,7 @@ export const routes: Routes = [
       {
         path: 'notifications',
         loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
-      },      
+      },
       {
         path: 'widgets',
         loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
