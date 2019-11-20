@@ -43,8 +43,9 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
-
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
 import { MaterialModule } from './material/material-module';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 
 
 
@@ -66,7 +67,9 @@ import { MaterialModule } from './material/material-module';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule
+    MaterialModule,
+    NgZorroAntdModule,
+    NzAutocompleteModule
   ],
   declarations: [
     AppComponent,

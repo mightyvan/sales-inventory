@@ -9,7 +9,8 @@ import { FormControl } from '@angular/forms';
 // Bills Routing
 import { InvoicesRoutingModule } from './invoices-routing.module';
 import { MaterialModule } from '../../material/material-module';
-
+import { NgZorroAntdModule, NZ_I18N, en_US } from 'ng-zorro-antd';
+import { NzAutocompleteModule } from 'ng-zorro-antd/auto-complete';
 
 @NgModule({
   imports: [
@@ -17,8 +18,10 @@ import { MaterialModule } from '../../material/material-module';
     InvoicesRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    MaterialModule
- 
+    MaterialModule,
+    NgZorroAntdModule,
+    NzAutocompleteModule,
+    ReactiveFormsModule
   ],
   declarations: [
     InvoicesComponent,

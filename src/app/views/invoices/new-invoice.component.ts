@@ -3,21 +3,26 @@ import { FormControl } from '@angular/forms';
 import { InvoiceService } from '../../service/invoice.service';
 import { User } from '../../model/user';
 import { Item } from '../../model/item';
-import { Observable } from 'rxjs';
-import {startWith, map} from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
+import {startWith, map, debounceTime, distinctUntilChanged, switchMap } from 'rxjs/operators';
 import { ItemService } from '../../service/item.service';
+
 
 @Component({
   templateUrl: 'new-invoice.component.html'
 })
 export class NewInvoiceComponent implements OnInit{
   userControl = new FormControl();
-  options: User[];
+  users$: User[];
   date;
   dueDate;
-  itemControl = new FormControl();
-  items: Item[];
-  itemFilter: Observable<Item[]>;
+  inputValue: string;
+  items$: Observable<Item[]>;
+  itemIndex: Subject<Item[]>;
+  private searchTerms = new Subject<string>();
+  search(term: string): void {
+    this.searchTerms.next(term);
+  }
   constructor(
     private invoiceService: InvoiceService,
     private itemService: ItemService
@@ -40,29 +45,18 @@ export class NewInvoiceComponent implements OnInit{
   }
   ngOnInit(): void {
     this.getallUser();
-    this.getAllItems();
-    
-    this.itemFilter = this.itemControl.valueChanges.pipe(
-      startWith(''),
-      map(value => this._filter(value))
+    this.items$ = this.searchTerms.pipe(
+      // wait 300ms after each keystroke before considering the term
+      debounceTime(300),
+
+      // ignore new term if same as previous term
+      distinctUntilChanged(),
+
+      // switch to new search observable each time the term changes
+      switchMap((term: string) => this.itemService.search(term)),
     );
-   
   }
   getallUser() {
-    this.invoiceService.getUsers().subscribe(options => {this.options = options; });
-  }
-  getAllItems () {
-    this.itemService.getItems().subscribe(items => { this.items = items; } );
-    // this.itemService.getItems().subscribe(items => { console.log(this.items = items); } );
-  }
-
-  private _filter(value: Observable<Item[]>): Item[] {
-    console.log(value, '_filter here');
-    const filterValue = this._normalizeValue(value);
-    return this.items.filter(item =>
-       this._normalizeValue(item).includes(filterValue));
-  }
-  private _normalizeValue(value: any) {
-    return value.toLowerCase().replace(/\s/g, '');
+    return this.invoiceService.getUsers().subscribe(options => {this.users$ = options; });
   }
 }
