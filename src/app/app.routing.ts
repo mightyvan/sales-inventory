@@ -52,47 +52,47 @@ export const routes: Routes = [
     children: [
       {
         path: 'invoices',
-        loadChildren: './views/invoices/invoices.module#InvoicesModule'
+        loadChildren: () => import('./views/invoices/invoices.module').then(m => m.InvoicesModule)
       },
       {
         path: 'bills',
-        loadChildren: './views/bills/bills.module#BillsModule'
+        loadChildren: () => import('./views/bills/bills.module').then(m => m.BillsModule)
       },
       {
         path: 'purchase-orders',
-        loadChildren: './views/purchase-orders/purchase-orders.module#PurchaseOrdersModule'
+        loadChildren: () => import('./views/purchase-orders/purchase-orders.module').then(m => m.PurchaseOrdersModule)
       },
       {
         path: 'items',
-        loadChildren: './views/items/items.module#ItemsModule'
-      }, 
+        loadChildren: () => import('./views/items/items.module').then(m => m.ItemsModule)
+      },
       {
         path: 'base',
-        loadChildren: './views/base/base.module#BaseModule'
+        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
       },
       {
         path: 'buttons',
-        loadChildren: './views/buttons/buttons.module#ButtonsModule'
+        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
       },
       {
         path: 'charts',
-        loadChildren: './views/chartjs/chartjs.module#ChartJSModule'
+        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
       },
       {
         path: 'dashboard',
-        loadChildren: './views/dashboard/dashboard.module#DashboardModule'
+        loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
         path: 'icons',
-        loadChildren: './views/icons/icons.module#IconsModule'
+        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
       },
       {
         path: 'notifications',
-        loadChildren: './views/notifications/notifications.module#NotificationsModule'
-      },      
+        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+      },
       {
         path: 'widgets',
-        loadChildren: './views/widgets/widgets.module#WidgetsModule'
+        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
       }
     ]
   },
